@@ -9,19 +9,18 @@
 
 
 //*********************** VARIABLES *****************************
-int sensorValue = 0; /*Variable valor potenciometre*/
+
 
 //************************* SETUP *******************************
 
 void setup() {               // configura el final de salida
- pinMode(3, OUTPUT);
+ Serial.begin(9600);
 }
 
 //************************** LOOP *******************************
 
 void loop() {                // inicia el bucle del programa
- sensorValue = analogRead(A0);
- analogWrite(3, sensorValue/4);
+ Serial.println(analogRead(A0));
 }
 
 //************************* FUNCIONS ****************************
